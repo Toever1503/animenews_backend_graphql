@@ -1,0 +1,46 @@
+scalar Date
+scalar Long
+schema{
+    query: Query
+    mutation: Mutation
+}
+type Query {
+    post(id: ID): Post
+    posts(page: PageInput!): PostConnection
+    postUrl(postName: String, postDate: Date): Post
+    postsByTerm(term: String, page: PageInput!): [Post]
+    postsByTag(tag: String, page: PageInput!): [Post]
+    postsFilter(filter: PostFilter, page: PageInput!): PostConnection
+
+}
+
+type Mutation {
+    createPost(post: PostInput!): Post
+    updatePost(id: ID!, post: PostInput!): Post
+    deletePost(id: ID!): Boolean
+}
+
+type PageInfo{
+    hasNextPage: Boolean
+    hasPreviousPage: Boolean
+    totalPages: Int
+    page: Int
+    perPage: Int
+    totalElements: Long
+}
+input PageInput{
+    page: Int!
+    size: Int!
+    sort: Sort
+}
+input Sort{
+    orders: [SortOrder]!
+}
+input SortOrder{
+    direction: Direction!
+    property: String!
+}
+enum Direction{
+    ASC
+    DESC
+}

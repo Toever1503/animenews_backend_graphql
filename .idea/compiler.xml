@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for animenews_backend_graphql" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <option name="addGeneratedAnnotation" value="true" />
+        <option name="debug" value="true" />
+        <processor name="org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor" />
+        <processor name="lombok.launch.AnnotationProcessorHider$AnnotationProcessor" />
+        <module name="animenews_backend_graphql" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="animenews_backend_graphql" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="animenews_backend_graphql" options="-parameters -AaddGeneratedAnnotation=true -Adebug=true" />
+    </option>
+  </component>
+</project>

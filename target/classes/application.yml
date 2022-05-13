@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+web-content:
+  root-content: D:/Animenews
+  post-content: ${web-content.root-content}/wp-content/uploads
+  anime-content: ${web-content.root-content}/uploads
+host: http://localhost:8080
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          transaction: trace

@@ -1,0 +1,6 @@
+type Term{
+    id: ID
+    name: String
+    slug: String
+    description: String
+}

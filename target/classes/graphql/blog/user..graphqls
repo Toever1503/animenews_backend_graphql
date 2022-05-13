@@ -1,0 +1,13 @@
+type User {
+    id: ID
+    userLogin: String
+    userEmail: String
+    userRegistered: Date # date
+    userActivationKey: String
+    userStatus: String
+    displayName: String
+    userAvatar: String
+    userDescription: String
+    loginFailed: Int
+    userRoles: [Authority]
+}
