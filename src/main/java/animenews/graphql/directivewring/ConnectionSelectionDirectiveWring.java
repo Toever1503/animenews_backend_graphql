@@ -1,6 +1,6 @@
 package animenews.graphql.directivewring;
 
-import animenews.graphql.queryMutation.ConnectionQuery;
+import animenews.graphql.resolvers.objectResolvers.ConnectionQuery;
 import graphql.language.StringValue;
 import graphql.schema.DataFetcher;
 import graphql.schema.GraphQLFieldDefinition;

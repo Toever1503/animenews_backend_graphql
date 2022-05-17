@@ -1,7 +1,10 @@
 package animenews.service;
 
 import animenews.entity.Authority;
-import animenews.entity.model.AuthorityModel;
+import animenews.model.AuthorityModel;
 
-public interface IAuthorityService extends BaseService<AuthorityModel, Authority, Integer> {
+import java.util.List;
+
+public interface IAuthorityService extends IBaseService<AuthorityModel, Authority, Integer> {
+    List<Authority> findAllByUserId(Long userId);
 }

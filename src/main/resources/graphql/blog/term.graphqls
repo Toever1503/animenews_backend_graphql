@@ -3,4 +3,25 @@ type Term{
     name: String
     slug: String
     description: String
+    posts(page: PageInput!): PostConnection
+}
+type TermConnection{
+    pageInfo: PageInfo!
+    edges: [TermEdge]
+}
+type TermEdge{
+    node: Term
+}
+
+input TermFilter{
+    q: String
+    slug: String
+    id_in: [ID]
+    id_not_in: [ID]
+}
+
+input TermInput{
+    name: String!
+    slug: String
+    description: String
 }

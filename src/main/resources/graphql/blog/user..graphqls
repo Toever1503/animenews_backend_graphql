@@ -1,13 +1,58 @@
 type User {
     id: ID
     userLogin: String
+    userNicename: String
     userEmail: String
     userRegistered: Date # date
     userActivationKey: String
-    userStatus: String
+    userStatus: Boolean
     displayName: String
     userAvatar: String
     userDescription: String
     loginFailed: Int
-    userRoles: [Authority]
+    authorities: [Authority]
+}
+
+type UserConnection {
+    pageInfo: PageInfo!
+    edges: [UserEdge]!
+}
+type UserEdge {
+    node: User!
+}
+input UserInput{
+    userLogin: String!
+    userNicename: String
+    userEmail: String!
+    userPass: String
+    userAvatar: String
+    userDescription: String
+    userStatus: Boolean
+    authorityLevel: Int!
+}
+input UserRegisterInput{
+    userLogin: String!
+    userNicename: String
+    userEmail: String!
+    userPass: String!
+}
+type loginResponse{
+    token: String
+    type: String
+    authorities: [String]
+}
+input userLoginInput{
+    username: String!
+    password: String!
+    remember: Boolean!
+}
+
+input UserFilter{
+    q: String
+    id_in: [ID]
+    id_not_in: [ID]
+    userEmail: String
+    userLogin: String
+    authority: String
+    userStatus: Boolean
 }

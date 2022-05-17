@@ -1,10 +1,13 @@
 package animenews.service;
 
 import animenews.entity.Tag;
-import animenews.entity.model.TagModel;
+import animenews.model.TagModel;
 
 import java.util.List;
 
-public interface ITagService extends BaseService<TagModel, Tag, Long> {
+public interface ITagService extends IBaseService<TagModel, Tag, Long> {
     List<Tag> tagsByObjectIdAndBy(Long objectId, String by);
+
+    Tag findBySlug(String slug);
+
 }

@@ -25,7 +25,7 @@ public class Term implements Serializable {
     @Column(name = "slug", nullable = false, length = 200)
     private String slug;
 
-    @Column(name = "description", nullable = false, length = 160)
+    @Column(name = "description", length = 160)
     private String description;
 
 }

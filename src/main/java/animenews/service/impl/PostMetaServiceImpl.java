@@ -1,7 +1,7 @@
 package animenews.service.impl;
 
 import animenews.entity.PostMeta;
-import animenews.entity.model.PostMetaModel;
+import animenews.model.PostMetaModel;
 import animenews.repository.PostMetaRepository;
 import animenews.service.IPostMetaService;
 import org.springframework.data.domain.Page;
@@ -62,5 +62,16 @@ public class PostMetaServiceImpl implements IPostMetaService {
     @Override
     public boolean deleteById(Long id) {
         return false;
+    }
+
+    @Override
+    public boolean deleteByIdS(List<Long> ids) {
+        this.postMetaRepository.deleteAllById(ids);
+        return true;
+    }
+
+    @Override
+    public List<PostMeta> findAllByPostId(Long postId) {
+        return this.postMetaRepository.findAllByPostId(postId);
     }
 }

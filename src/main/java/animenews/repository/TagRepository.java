@@ -18,6 +18,9 @@ public interface TagRepository extends JpaRepository<Tag, Long>, JpaSpecificatio
 
     Page<Tag> findTop5ByNameLike(String tagName, Pageable page);
 
-    @Query(value="SELECT t from Tag t join TagRelationship tr on t.id = tr.tagId WHERE tr.objectId = ?1 and tr.tagBy = ?2")
+    @Query(value = "SELECT t from Tag t join TagRelationship tr on t.id = tr.tagId WHERE tr.objectId = ?1 and tr.tagBy = ?2")
     List<Tag> tagsByObjectIdAndBy(Long objectId, String by);
+
+    @Query("SELECT t.id from Tag t where t.id in ?1")
+    List<Long> findAllIdsIn(List<Long> ids);
 }

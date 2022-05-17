@@ -1,7 +1,7 @@
 package animenews.graphql;
 
 import animenews.graphql.directivewring.ConnectionSelectionDirectiveWring;
-import animenews.graphql.queryMutation.ConnectionQuery;
+import animenews.graphql.resolvers.objectResolvers.ConnectionQuery;
 import animenews.graphql.scalar.ScalarTypeUtils;
 import graphql.execution.instrumentation.Instrumentation;
 import graphql.execution.instrumentation.tracing.TracingInstrumentation;

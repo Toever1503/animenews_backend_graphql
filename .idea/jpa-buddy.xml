@@ -2,5 +2,13 @@
 <project version="4">
   <component name="JpaBuddyIdeaProjectConfig">
     <option name="defaultUnitInitialized" value="true" />
+    <option name="reverseEngineeringLastDbConnectionId" value="198c226c-2ced-4209-b0df-8ed1a563d210" />
+    <option name="reLastEntityCreationPackage" value="src/main/java/animenews/entity" />
+    <reUseDbSnapshotConnections>
+      <dbConnection id="198c226c-2ced-4209-b0df-8ed1a563d210" />
+    </reUseDbSnapshotConnections>
+    <option name="reIgnoreSlowDbConnections">
+      <ignoreDs id="198c226c-2ced-4209-b0df-8ed1a563d210" />
+    </option>
   </component>
 </project>
