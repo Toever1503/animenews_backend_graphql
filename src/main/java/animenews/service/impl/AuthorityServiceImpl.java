@@ -1,7 +1,7 @@
 package animenews.service.impl;
 
 import animenews.entity.Authority;
-import animenews.entity.model.AuthorityModel;
+import animenews.model.AuthorityModel;
 import animenews.service.IAuthorityService;
 import animenews.repository.AuthorityRepository;
 import org.springframework.data.domain.Page;
@@ -73,12 +73,17 @@ public class AuthorityServiceImpl implements IAuthorityService {
 
     @Override
     public boolean deleteById(Integer id) {
-        try {
-            this.authorityRepository.deleteById(id);
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        this.authorityRepository.deleteById(id);
         return false;
+    }
+
+    @Override
+    public boolean deleteByIdS(List<Integer> ids) {
+        return false;
+    }
+
+    @Override
+    public List<Authority> findAllByUserId(Long userId) {
+        return this.authorityRepository.findAllAuthoritesByUser(userId);
     }
 }

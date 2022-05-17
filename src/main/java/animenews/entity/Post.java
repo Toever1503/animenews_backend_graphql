@@ -1,11 +1,14 @@
 package animenews.entity;
 
+import animenews.entity.relationship.post.TagRelationship;
+import animenews.entity.relationship.post.TermRelationship;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Where;
 import org.hibernate.annotations.WhereJoinTable;
 
 import javax.persistence.*;
@@ -65,17 +68,23 @@ public class Post implements Serializable {
     @JoinColumn(name = "post_author", nullable = false)
     private User author;
 
-//    @Transient
-//    private List<PostMeta> postMetas;
-//
-//    @Transient
-//    private List<Term> postTerms;
-//
-//    @Transient
-//    private List<Tag> postTags;
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "post_id")
+    private List<PostMeta> postMeta_save;
 
-//    @Transient
-//    private Post next;
-//    @Transient
-//    private Post prev;
+    @OneToMany
+    @JoinColumn(name = "object_id", updatable = false)
+    @Where(clause = "term_by='post'")
+    private List<TermRelationship> postTermFilter;
+
+    //    @ManyToMany
+//    @JoinTable(name = "tag_relationships",
+//            joinColumns = @JoinColumn(name = "object_id"),
+//            inverseJoinColumns = @JoinColumn(name = "tag_id"))
+//    @WhereJoinTable(clause = "tag_by = 'post'")
+    @OneToMany
+    @JoinColumn(name = "object_id", updatable = false)
+    @Where(clause = "tag_by='post'")
+    private List<TagRelationship> postTagFilter;
+
 }

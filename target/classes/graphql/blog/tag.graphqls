@@ -2,4 +2,25 @@ type Tag{
     id: ID
     name: String
     slug: String
+    posts(page: PageInput!): PostConnection
+}
+
+type TagConnection{
+    edges: [TagEdge]
+    pageInfo: PageInfo!
+}
+
+type TagEdge{
+    node: Tag
+}
+
+input TagFilter{
+    q: String
+    slug: String
+    id_in: [ID]
+    id_not_in: [ID]
+}
+input TagInput{
+    name: String!
+    slug: String
 }

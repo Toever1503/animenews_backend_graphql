@@ -1,7 +1,10 @@
 package animenews.service;
 
 import animenews.entity.PostMeta;
-import animenews.entity.model.PostMetaModel;
+import animenews.model.PostMetaModel;
 
-public interface IPostMetaService extends BaseService<PostMetaModel, PostMeta, Long> {
+import java.util.List;
+
+public interface IPostMetaService extends IBaseService<PostMetaModel, PostMeta, Long> {
+    List<PostMeta> findAllByPostId(Long postId);
 }

@@ -19,4 +19,7 @@ public interface TermRepository extends JpaRepository<Term, Long>, JpaSpecificat
     List<Term> termsByObjectIdAndBy(Long postId, String by);
 
     Page<Term> findBySlugLike(String slug, Pageable pageable);
+
+    @Query("SELECT t.id from Term t where t.id in ?1")
+    List<Long> findAllIdsIn(List<Long> ids);
 }

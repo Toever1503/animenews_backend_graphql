@@ -26,6 +26,4 @@ public class Authority implements Serializable {
     @Column(name = "authority_level", nullable = false)
     private Integer authorityLevel;
 
-    @ManyToMany(mappedBy = "userRoles_")
-    private Set<User> users;
 }

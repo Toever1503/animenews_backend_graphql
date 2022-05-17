@@ -7,6 +7,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -35,14 +36,14 @@ public class User implements Serializable {
     private String userEmail;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "user_registered", nullable = false)
+    @Column(name = "user_registered")
     private Date userRegistered;
 
     @Column(name = "user_activation_key")
-    private Long userActivationKey;
+    private Long userActivationKey = 0L;
 
     @Column(name = "user_status")
-    private Boolean userStatus;
+    private Boolean userStatus = false;
 
     @Column(name = "display_name", length = 250)
     private String displayName;
@@ -54,13 +55,10 @@ public class User implements Serializable {
     private String userDescription;
 
     @Column(name = "login_failed")
-    private Integer loginFailed;
+    private Integer loginFailed = 0;
 
-    @JsonIgnore
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "user_authority",
-            joinColumns = {@JoinColumn(name = "user_id")},
-            inverseJoinColumns = {@JoinColumn(name = "authority_id")})
-    private List<Authority> userRoles_;
-
+    @ManyToMany
+    @JoinTable(name = "user_authority", joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "authority_id"))
+    private Set<Authority> authorityFilter;
 }

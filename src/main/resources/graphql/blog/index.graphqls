@@ -7,17 +7,47 @@ schema{
 type Query {
     post(id: ID): Post
     posts(page: PageInput!): PostConnection
-    postUrl(postName: String, postDate: Date): Post
-    postsByTerm(term: String, page: PageInput!): [Post]
-    postsByTag(tag: String, page: PageInput!): [Post]
-    postsFilter(filter: PostFilter, page: PageInput!): PostConnection
+    postUrl(postName: String!, postDate: String!): Post
+    postsByTerm(term: String!, page: PageInput!): [Post]
+    postsByTag(tag: String!, page: PageInput!): [Post]
+    postsFilter(filter: PostFilter!, page: PageInput!): PostConnection
 
+    tag(id: ID!): Tag
+    tag(slug: String!): Tag
+    tags(page: PageInput!): TagConnection
+    tagsFilter(filter: TagFilter!, page: PageInput!): TagConnection
+
+    term(id: ID!): Term
+    term(slug: String!): Term
+    terms(page: PageInput!): TermConnection
+    termsFilter(filter: TermFilter!, page: PageInput!): TermConnection
+
+    user(id: ID!): User
+    user(username: String!): User
+    users(page: PageInput!): UserConnection
+    usersFilter(filter: UserFilter!, page: PageInput!): UserConnection
 }
 
 type Mutation {
     createPost(post: PostInput!): Post
     updatePost(id: ID!, post: PostInput!): Post
     deletePost(id: ID!): Boolean
+
+    createTag(tag: TagInput!): Tag
+    updateTag(id: ID!, tag: TagInput!): Tag
+    deleteTag(id: ID!): Boolean
+
+    createTerm(term: TermInput!): Term
+    updateTerm(id: ID!, term: TermInput!): Term
+    deleteTerm(id: ID!): Boolean
+
+    createUser(user: UserInput!, userPass: String!): User
+    updateUser(id: ID!, user: UserInput!): User
+    deleteUser(id: ID!): Boolean
+    registerAccount(userRegister: UserRegisterInput!): User
+    forgotPassword(username: String!): Boolean
+    resetPassword(token: String!, password: String!): Boolean
+    login(userLogin: userLoginInput): loginResponse
 }
 
 type PageInfo{

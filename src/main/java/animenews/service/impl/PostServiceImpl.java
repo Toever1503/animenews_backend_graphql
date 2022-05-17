@@ -1,8 +1,10 @@
 package animenews.service.impl;
 
+import animenews.Utils.ASCIIConverter;
+import animenews.Utils.SecurityUtils;
 import animenews.entity.Post;
-import animenews.entity.model.PostFilter;
-import animenews.entity.model.PostModel;
+import animenews.model.filter.PostFilter;
+import animenews.model.PostModel;
 import animenews.entity.relationship.post.TagRelationship;
 import animenews.entity.relationship.post.TermRelationship;
 import animenews.repository.specification.PostSpecification;
@@ -52,27 +54,14 @@ public class PostServiceImpl implements IPostService {
                 .postTitle(model.getPostTitle())
                 .postExcerpt(model.getPostExcerpt())
                 .postStatus(model.getPostStatus())
-                .postName(model.getPostName())
+                .postName((model.getPostName() == null || model.getPostName().isEmpty()) ? ASCIIConverter.utf8ToAscii(model.getPostTitle()) : model.getPostName())
                 .isPinged(model.getIsPinged())
                 .postModified(model.getPostModified())
                 .commentCount(model.getCommentCount())
+                .postMeta_save(new ArrayList<>())
                 .build();
     }
 
-//    public Postmeta metaModelToEntity(PostmetaModel model) {
-//        if (model == null) return null;
-//        return Postmeta.builder()
-//                .metaKey(model.getMetaKey())
-//                .metaValue(model.getMetaValue())
-//                .build();
-//    }
-
-    Post toPostWithAdditional(Post post) {
-//        post.setPostMetas(postmetaRepository.findAllByPostId(post.getId()));
-//        post.setPostTerms(termRepository.findTermsOfPost(post.getId()));
-//        post.setPostTags(tagRepository.findTagsOfPost(post.getId()));
-        return post;
-    }
 
     @Transactional
     @Override
@@ -105,7 +94,7 @@ public class PostServiceImpl implements IPostService {
     @Transactional
     @Override
     public Page<Post> search(String q, Pageable page) {
-        return this.postRepository.search(q, page).map(this::toPostWithAdditional);
+        return this.postRepository.search(q, page);
     }
 
 
@@ -116,41 +105,34 @@ public class PostServiceImpl implements IPostService {
         Calendar calendar = Calendar.getInstance();
         post.setPostDate(calendar.getTime());
         post.setPostModified(calendar.getTime());
+        post.setAuthor(SecurityUtils.getUser());
 
-//        post.setPostMetas(model.getPostMetas());
-
+        post.setPostMeta_save(model.getPostMetas());
 
         post = this.postRepository.save(post); // save post and get postId
         insertRelationPost(model, post.getId()); // for add relation post meta, tag, term
-        return toPostWithAdditional(post);
+        return post;
     }
 
     void insertRelationPost(PostModel model, Long post) {
-        // insert new post meta if has post meta
-//        if (model.getPostMetas() != null) {
-//            this.postmetaRepository
-//                    .saveAll(
-//                            model.getPostMetas().stream()
-//                                    .map(meta -> metaModelToEntity(meta).postId(post))
-//                                    .collect(Collectors.toList())
-//                    );
-//        }
-
         // insert new tag if has
-        if (model.getNewTags() != null) {
+        if (model.getTagIds() != null && !model.getTagIds().isEmpty()) {
+            model.setTagIds(this.tagRepository.findAllIdsIn(model.getTagIds()));
             this.tagRelationshipRepository.saveAll(
-                    model.getNewTags().stream()
+                    model.getTagIds().stream()
                             .map(tagId -> new TagRelationship(null, post, tagId, "post"))
                             .collect(Collectors.toList())
             );
         }
-        // insert new term if has
-        if (model.getNewTerms() != null)
+        //insert new term if has
+        if (model.getTermIds() != null && !model.getTermIds().isEmpty()) {
+            model.setTermIds(this.termRepository.findAllIdsIn(model.getTermIds()));
             this.termRelationshipRepository.saveAll(
-                    model.getNewTerms().stream()
+                    model.getTermIds().stream()
                             .map(termId -> new TermRelationship(null, post, termId, "post"))
                             .collect(Collectors.toList())
             );
+        }
     }
 
 
@@ -160,41 +142,56 @@ public class PostServiceImpl implements IPostService {
         Post post = modelToEntity(model);
         Calendar calendar = Calendar.getInstance();
         post.setPostModified(calendar.getTime());
+        post.setAuthor(SecurityUtils.getUser());
 
-//        // check previous post meta and delete if not exist in metaIds
-//        if (model.getMetaIds() == null || model.getMetaIds().isEmpty())
-//            model.setMetaIds(Collections.singletonList(0l));
-//        this.postmetaRepository.deleteAllByIdNotInAndPostId(model.getMetaIds(), post.getId());
-
-//        post.setPostMetas(model.getPostMetas());
+        if (model.getPostMetas() != null && !model.getPostMetas().isEmpty())
+            post.setPostMeta_save(model.getPostMetas()
+                    .stream()
+                    .map(meta -> meta.postId(post.getId())).collect(Collectors.toList()));
 
         // check previous post tag and delete if not exist in tagIds
         if (model.getTagIds() == null || model.getTagIds().isEmpty())
-            model.setTagIds(model.getTagIds());
-        this.tagRelationshipRepository.deleteAllByIdNotInAndObjectIdAndTagBy(model.getTagIds(), post.getId(), "post");
-
+            this.tagRelationshipRepository.deleteAllByObjectIdAndTagBy(post.getId(), "post");
+        else {
+            List<Long> originalTagIds = this.tagRelationshipRepository.findAllTagIds(model.getTagIds(), post.getId(), "post");
+            System.out.println("originalTagIds: " + originalTagIds);
+            if (originalTagIds != null && !originalTagIds.isEmpty()) {
+                this.tagRelationshipRepository.deleteAllByTagIdNotInAndObjectIdAndTagBy(originalTagIds, post.getId(), "post");
+                model.getTagIds().removeAll(originalTagIds);
+                System.out.println("new tagids: " + model.getTagIds());
+            }
+        }
         // check previous term and delete if not exist in termIds
         if (model.getTermIds() == null || model.getTermIds().isEmpty())
-            model.setTermIds(model.getTermIds());
-        this.termRelationshipRepository.deleteAllByIdNotInAndObjectIdAndTermBy(model.getTermIds(), post.getId(), "post");
-
+            this.termRelationshipRepository.deleteAllByObjectIdAndTermBy(post.getId(), "post");
+        else {
+            List<Long> originalTermIds = this.termRelationshipRepository.findAllTagIds(model.getTermIds(), post.getId(), "post");
+            System.out.println("originalTermIds: " + originalTermIds);
+            if (originalTermIds != null && !originalTermIds.isEmpty())
+                this.termRelationshipRepository.deleteAllByTermIdNotInAndObjectIdAndTermBy(originalTermIds, post.getId(), "post");
+            model.getTermIds().removeAll(originalTermIds);
+            System.out.println("new termids: " + model.getTermIds());
+        }
         insertRelationPost(model, post.getId()); // for add relation post meta, tag, term
-        return toPostWithAdditional(this.postRepository.save(post));
+        return this.postRepository.save(post);
     }
 
     @Transactional
     @Override
     public boolean deleteById(Long id) {
-        try {
-            this.postRepository.deleteById(id);
-            this.termRelationshipRepository.deleteAllByObjectIdAndTermBy(id, "post");
-            this.tagRelationshipRepository.deleteAllByObjectIdAndTagBy(id, "post");
-//            this.postmetaRepository.deleteAllByPostId(id);
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
+        this.postRepository.deleteById(id);
+        this.termRelationshipRepository.deleteAllByObjectIdAndTermBy(id, "post");
+        this.tagRelationshipRepository.deleteAllByObjectIdAndTagBy(id, "post");
+        return true;
+    }
+
+    @Transactional
+    @Override
+    public boolean deleteByIdS(List<Long> ids) {
+        for (Long id : ids) {
+            this.deleteById(id);
         }
-        return false;
+        return true;
     }
 
     @Override
@@ -218,7 +215,7 @@ public class PostServiceImpl implements IPostService {
     }
 
     @Override
-    public List<Post> findNextPrevPosts(Long postId, Long termId){
+    public List<Post> findNextPrevPosts(Long postId, Long termId) {
         Pageable page = PageRequest.of(0, 1); // get first result
         List<Post> data = new ArrayList<Post>(); // empty result
 

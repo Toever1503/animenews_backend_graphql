@@ -12,9 +12,7 @@ import java.util.List;
 
 @Repository
 public interface PostMetaRepository extends JpaRepository<PostMeta, Long>, JpaSpecificationExecutor<PostMeta>  {
-//    List<Postmeta> findAllByPostId(Long postId);
 //    List<PostMeta> findAllByIdIn(List<Long> ids);
-
     @Transactional
     void deleteAllByPostId(Long postId);
 

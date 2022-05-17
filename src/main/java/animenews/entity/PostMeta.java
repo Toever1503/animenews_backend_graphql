@@ -27,7 +27,12 @@ public class PostMeta implements Serializable {
     @Lob
     @Column(name = "meta_value", nullable = false)
     private String metaValue;
+
     @Column(name = "post_id")
     private Long postId;
 
+    public PostMeta postId(Long id) {
+        this.postId = id;
+        return this;
+    }
 }

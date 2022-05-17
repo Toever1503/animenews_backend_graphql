@@ -57,9 +57,8 @@ input PostFilter{
 
 input PostMetaInput{
     metaId: ID
-    metaKey: String
-    metaValue: String
-    postId: ID
+    metaKey: String!
+    metaValue: String!
 }
 
 input PostInput{
@@ -68,9 +67,6 @@ input PostInput{
     postContent: String
     postStatus: String
     postName: String
-
-    postDate: Date #@dateformat("YYYY-MM-DD")
-    postModified: Date #@dateformat("YYYY-MM-DD")
 
     isPinged: Boolean
     commentCount: Int
