@@ -8,10 +8,13 @@ import animenews.graphql.connection.CustomPageable;
 import animenews.service.IPostService;
 import graphql.kickstart.tools.GraphQLMutationResolver;
 import graphql.kickstart.tools.GraphQLQueryResolver;
+import graphql.schema.DataFetchingEnvironment;
+import org.dataloader.DataLoader;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 @Component
 public class PostResolver implements GraphQLQueryResolver, GraphQLMutationResolver {
@@ -28,13 +31,15 @@ public class PostResolver implements GraphQLQueryResolver, GraphQLMutationResolv
 
     @Transactional
     public CustomConnection<Post> posts(CustomPageable page) {
+        System.out.println("posts thread id: " + Thread.currentThread().getId());
         return ConnectionQuery.createConnection(this.postService.findAll(page.toPageable()));
     }
 
     @Transactional
-    public Post postUrl(String postName, String postDate) {
-
-        return this.postService.findPostUrl(postName, postDate);
+    public CompletableFuture<Post> postUrl(String postName, String postDate, DataFetchingEnvironment env) {
+        System.out.println("posts thread id: " + Thread.currentThread().getId());
+        String[] key = {postName, postDate};
+        return ((DataLoader) env.getDataLoader("postUrl")).load(key);
     }
 
     // not cache

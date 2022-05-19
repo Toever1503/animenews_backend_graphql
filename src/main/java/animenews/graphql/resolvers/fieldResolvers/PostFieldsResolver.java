@@ -25,20 +25,24 @@ public class PostFieldsResolver implements GraphQLResolver<Post> {
     }
 
     List<PostMeta> postMetas(Post post, DataFetchingEnvironment env) {
+        System.out.println("post metas thread id: " + Thread.currentThread().getId());
         return env.getOperationDefinition().getOperation().name().equalsIgnoreCase("mutation")
                 ? post.getPostMeta_save()
                 : this.postMetaService.findAllByPostId(post.getId());
     }
 
     List<Tag> postTags(Post post) {
+        System.out.println("posts tag thread id: " + Thread.currentThread().getId());
         return this.tagService.tagsByObjectIdAndBy(post.getId(), "post");
     }
 
     List<Term> postTerms(Post post) {
+        System.out.println("posts term thread id: " + Thread.currentThread().getId());
         return this.termService.termsByObjectIdAndBy(post.getId(), "post");
     }
 
     List<Post> nextPrevPost(Post post, Long termSlug) {
+        System.out.println("posts next prev thread id: " + Thread.currentThread().getId());
         return this.postService.findNextPrevPosts(post.getId(), termSlug);
     }
 }
