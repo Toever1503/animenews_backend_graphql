@@ -1,10 +1,11 @@
 package animenews.Utils;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.Map;
 
 public class RequestUtil {
-    private static Map<Long, HttpServletRequest> requests;
+    private static Map<Long, HttpServletRequest> requests = new HashMap<>();
 
 
     public static HttpServletRequest getRequest(Long currentThreadId) {
