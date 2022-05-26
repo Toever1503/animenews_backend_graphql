@@ -10,6 +10,8 @@ import graphql.schema.GraphQLScalarType;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.List;
+
 
 @Configuration
 public class GraphqlConfiguration {
@@ -28,10 +30,10 @@ public class GraphqlConfiguration {
         );
     }
 
-    @Bean
-    public Instrumentation instrumentationState() {
-        return new TracingInstrumentation();
-    }
+//    @Bean
+//    public Instrumentation instrumentationState() {
+//        return new TracingInstrumentation();
+//    }
 
     @Bean
     public GraphQLScalarType longScalar() {

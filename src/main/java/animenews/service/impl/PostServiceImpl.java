@@ -3,6 +3,7 @@ package animenews.service.impl;
 import animenews.Utils.ASCIIConverter;
 import animenews.Utils.SecurityUtils;
 import animenews.entity.Post;
+import animenews.graphql.publishers.PostUpdatePublisher;
 import animenews.model.filter.PostFilter;
 import animenews.model.PostModel;
 import animenews.entity.relationship.post.TagRelationship;
@@ -35,14 +36,16 @@ public class PostServiceImpl implements IPostService {
     private final TermRepository termRepository;
     private final TagRelationshipRepository tagRelationshipRepository;
     private final TagRepository tagRepository;
+    private final PostUpdatePublisher postUpdatePublisher;
 
-    public PostServiceImpl(PostRepository postRepository, PostMetaRepository postmetaRepository, TermRelationshipRepository termRelationshipRepository, TermRepository termRepository, TagRelationshipRepository tagRelationshipRepository, TagRepository tagRepository) {
+    public PostServiceImpl(PostRepository postRepository, PostMetaRepository postmetaRepository, TermRelationshipRepository termRelationshipRepository, TermRepository termRepository, TagRelationshipRepository tagRelationshipRepository, TagRepository tagRepository, PostUpdatePublisher postUpdatePublisher) {
         this.postRepository = postRepository;
         this.postmetaRepository = postmetaRepository;
         this.termRelationshipRepository = termRelationshipRepository;
         this.termRepository = termRepository;
         this.tagRelationshipRepository = tagRelationshipRepository;
         this.tagRepository = tagRepository;
+        this.postUpdatePublisher = postUpdatePublisher;
     }
 
     public Post modelToEntity(PostModel model) {
@@ -173,7 +176,9 @@ public class PostServiceImpl implements IPostService {
             System.out.println("new termids: " + model.getTermIds());
         }
         insertRelationPost(model, post.getId()); // for add relation post meta, tag, term
-        return this.postRepository.save(post);
+        this.postRepository.save(post);
+        postUpdatePublisher.publish(model.getId(), post);
+        return post;
     }
 
     @Transactional

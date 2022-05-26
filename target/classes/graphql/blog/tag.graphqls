@@ -1,4 +1,4 @@
-type Tag{
+interface Tag{
     id: ID
     name: String
     slug: String

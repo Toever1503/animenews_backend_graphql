@@ -1,4 +1,4 @@
-type Term{
+interface Term{
     id: ID
     name: String
     slug: String

@@ -3,6 +3,7 @@ scalar Long
 schema{
     query: Query
     mutation: Mutation
+    subscription: Subscription
 }
 type Query {
     post(id: ID): Post
@@ -48,6 +49,10 @@ type Mutation {
     forgotPassword(username: String!): Boolean
     resetPassword(token: String!, password: String!): Boolean
     login(userLogin: userLoginInput): loginResponse
+}
+
+type Subscription{
+    postUpdate: Post
 }
 
 type PageInfo{

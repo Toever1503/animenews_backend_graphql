@@ -37,6 +37,7 @@ public class UserResolver implements GraphQLQueryResolver, GraphQLMutationResolv
 
     public CustomConnection<User> usersFilter(UserFilter filter, CustomPageable page) {
         return ConnectionQuery.createConnection(userService.findAll(UserSpecification.filter(filter), page.toPageable()));
+
     }
 
     public User createUser(UserModel userModel, String userPass) {

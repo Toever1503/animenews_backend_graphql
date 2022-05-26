@@ -153,7 +153,6 @@
     <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains.kotlinx:kotlinx-coroutines-reactive:1.5.2" level="project" />
-    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.3" level="project" />
     <orderEntry type="library" name="Maven: com.graphql-java:graphql-java:17.3" level="project" />
     <orderEntry type="library" name="Maven: com.graphql-java:java-dataloader:3.1.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.antlr:antlr4-runtime:4.9.2" level="project" />
@@ -184,5 +183,10 @@
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-crypto:5.6.3" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:5.6.3" level="project" />
     <orderEntry type="library" name="Maven: io.jsonwebtoken:jjwt:0.9.1" level="project" />
+    <orderEntry type="library" name="Maven: io.reactivex.rxjava3:rxjava:3.1.4" level="project" />
+    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-websocket:2.6.7" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-messaging:5.3.19" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-websocket:5.3.19" level="project" />
   </component>
 </module>
