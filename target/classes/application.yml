@@ -19,7 +19,3 @@ logging:
       springframework:
         data:
           transaction: trace
-graphql:
-  servlet:
-    tracingEnabled: true
-    tracing-enabled: true
