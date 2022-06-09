@@ -79,7 +79,6 @@ animenews\repository\UserRepository.class
 animenews\service\impl\UserServiceImpl.class
 animenews\config\interceptor\BeginAfterHandleRequestFilter.class
 animenews\model\PostModel.class
-animenews\config\BeanConfiguration$1.class
 animenews\config\BeanConfiguration.class
 animenews\repository\relationship\TermRelationshipRepository.class
 animenews\config\jwt\JwtLoginResponse$JwtLoginResponseBuilder.class

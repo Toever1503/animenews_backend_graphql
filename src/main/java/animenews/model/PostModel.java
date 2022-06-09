@@ -15,7 +15,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PostModel implements Serializable {
     private static final long serialVersionUID = 1L;
     private Long id;
