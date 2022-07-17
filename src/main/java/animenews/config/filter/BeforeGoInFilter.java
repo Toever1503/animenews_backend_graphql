@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-//@Component
-//@Order(value = Ordered.HIGHEST_PRECEDENCE)
+@Component
+@Order(value = Ordered.HIGHEST_PRECEDENCE)
 public class BeforeGoInFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {

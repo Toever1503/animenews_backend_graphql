@@ -1,6 +1,7 @@
 package animenews.graphql.publishers;
 
 import animenews.entity.Post;
+import graphql.kickstart.autoconfigure.editor.graphiql.ServletGraphiQLController;
 import io.reactivex.rxjava3.core.BackpressureStrategy;
 import io.reactivex.rxjava3.core.Flowable;
 import io.reactivex.rxjava3.core.Observable;
@@ -22,6 +23,7 @@ public class PostUpdatePublisher {
         ConnectableObservable<Post> connectableObservable = commentUpdateObservable.share().publish();
         connectableObservable.connect();
         publisher = connectableObservable.toFlowable(BackpressureStrategy.BUFFER);
+
     }
 
     public void publish(Long id, final Post post) {

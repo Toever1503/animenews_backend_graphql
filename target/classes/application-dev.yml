@@ -19,7 +19,7 @@ spring:
       #      hibernate.query.fail_on_pagination_over_collection_fetch: true
       #      hibernate.query.in_clause_parameter_padding: true
       hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
+        dialect: org.hibernate.dialect.MariaDB103Dialect
         ddl-auto: update
         naming:
           physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
@@ -27,9 +27,10 @@ spring:
     show-sql: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://localhost:3306/animyrju_main_graphql?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
-    username: animenews
+    url: jdbc:mariadb://35.221.138.72:3306/animyrju_main_graphql?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+    username: animyrju
     password: 1234
+    driverClassName: org.mariadb.jdbc.Driver
     hikari:
       poolName: Hikari
       auto-commit: false
