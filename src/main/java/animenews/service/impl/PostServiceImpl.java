@@ -16,6 +16,8 @@ import animenews.repository.TagRepository;
 import animenews.repository.TermRepository;
 import animenews.repository.relationship.TagRelationshipRepository;
 import animenews.repository.relationship.TermRelationshipRepository;
+import graphql.GraphQLException;
+import graphql.GraphqlErrorException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -69,7 +71,8 @@ public class PostServiceImpl implements IPostService {
     @Transactional
     @Override
     public Post findById(Long id) {
-        return this.postRepository.findById(id).orElseThrow(() -> new RuntimeException("Post not found"));
+
+        return this.postRepository.findById(id).orElseThrow(() -> new GraphQLException("Post not found"));
     }
 
     @Transactional
