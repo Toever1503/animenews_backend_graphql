@@ -25,7 +25,7 @@ public class PostResolver implements GraphQLQueryResolver, GraphQLMutationResolv
     }
 
     @Transactional
-    public Post post(Long id) {
+    public Post post(Long id, DataFetchingEnvironment env) {
         System.out.println("find post by id: " + id);
         return postService.findById(id);
     }

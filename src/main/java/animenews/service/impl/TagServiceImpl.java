@@ -2,6 +2,7 @@ package animenews.service.impl;
 
 import animenews.Utils.ASCIIConverter;
 import animenews.entity.Tag;
+import animenews.graphql.exception.CustomException;
 import animenews.model.TagModel;
 import animenews.repository.relationship.TagRelationshipRepository;
 import animenews.service.ITagService;
@@ -36,7 +37,7 @@ public class TagServiceImpl implements ITagService {
     @Transactional
     @Override
     public Tag findById(Long id) {
-        return this.tagRepository.findById(id).orElseThrow(() -> new RuntimeException("Tag not found"));
+        return this.tagRepository.findById(id).orElseThrow(() -> new CustomException("Tag not found"));
     }
     @Transactional
     @Override
@@ -98,6 +99,6 @@ public class TagServiceImpl implements ITagService {
     @Transactional
     @Override
     public Tag findBySlug(String slug) {
-        return this.tagRepository.findBySlug(slug).orElseThrow(() -> new RuntimeException("Tag not found"));
+        return this.tagRepository.findBySlug(slug).orElseThrow(() -> new CustomException("Tag not found"));
     }
 }
