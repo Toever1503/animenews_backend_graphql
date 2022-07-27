@@ -3,7 +3,7 @@ package animenews.service.impl;
 import animenews.Utils.ASCIIConverter;
 import animenews.Utils.SecurityUtils;
 import animenews.entity.Post;
-import animenews.graphql.exception.CustomException;
+import animenews.graphql.exception.CustomGraphqlException;
 import animenews.graphql.publishers.PostUpdatePublisher;
 import animenews.model.filter.PostFilter;
 import animenews.model.PostModel;
@@ -17,10 +17,6 @@ import animenews.repository.TagRepository;
 import animenews.repository.TermRepository;
 import animenews.repository.relationship.TagRelationshipRepository;
 import animenews.repository.relationship.TermRelationshipRepository;
-import graphql.GraphQLException;
-import graphql.GraphqlErrorException;
-import graphql.execution.UnresolvedTypeException;
-import graphql.schema.GraphQLNamedOutputType;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -75,7 +71,7 @@ public class PostServiceImpl implements IPostService {
     @Override
     public Post findById(Long id) {
 //        GraphQLObjectType
-        return this.postRepository.findById(id).orElseThrow(() -> new CustomException("Post not found"));
+        return this.postRepository.findById(id).orElseThrow(() -> new CustomGraphqlException("Post not found"));
     }
 
     @Transactional

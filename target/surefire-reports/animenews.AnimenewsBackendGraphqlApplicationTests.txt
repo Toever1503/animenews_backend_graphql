@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: animenews.AnimenewsBackendGraphqlApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.094 s - in animenews.AnimenewsBackendGraphqlApplicationTests
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 12.734 s <<< FAILURE! - in animenews.AnimenewsBackendGraphqlApplicationTests
+contextLoads  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: java.lang.UnsupportedOperationException: MockServerContainer does not support addEndpoint(ServerEndpointConfig)
+

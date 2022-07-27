@@ -3,19 +3,16 @@ package animenews.graphql.exception;
 import graphql.ErrorClassification;
 import graphql.GraphQLError;
 import graphql.language.SourceLocation;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @Data
-public class CustomException extends RuntimeException implements GraphQLError {
+public class CustomGraphqlException extends RuntimeException implements GraphQLError {
 
-    public CustomException(String message) {
+    public CustomGraphqlException(String message) {
         super(message);
     }
 

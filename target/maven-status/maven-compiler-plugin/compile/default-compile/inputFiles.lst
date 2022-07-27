@@ -74,11 +74,13 @@ C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\an
 C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\PostMeta.java
 C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\CustomOrder.java
 C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\CustomConnection.java
+C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\exception\CustomDataFetcherExceptionHandler.java
 C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\relationship\TermRelationshipRepository.java
 C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\objectResolvers\TagResolver.java
 C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\objectResolvers\UserResolver.java
 C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\Utils\SecurityUtils.java
 C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\objectResolvers\ConnectionQuery.java
+C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\exception\CustomException.java
 C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\relationship\TagRelationshipRepository.java
 C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\AuthorityModel.java
 C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\TermRepository.java
