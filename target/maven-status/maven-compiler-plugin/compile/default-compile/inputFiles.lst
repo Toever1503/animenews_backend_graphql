@@ -1,93 +1,93 @@
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\IPostMetaService.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\AnimenewsBackendGraphqlApplication.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\Utils\RequestUtil.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\DefaultCustomConnection.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\WebConfiguration.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\jwt\JwtLoginResponse.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\IMailService.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\specification\PostSpecification.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\impl\MailServiceImpl.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\Utils\TimeUtilsService.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\specification\UserSpecification.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\IPostService.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\filter\BeforeGoInFilter.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\DefaultCustomPageInfo.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\TermModel.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\IAuthorityService.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\IUserService.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\CustomPageInfo.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\web\TestController.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\relationship\post\TagRelationship.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\publishers\PostUpdatePublisher.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\ITermService.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\WebSocketConfiguration.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\Tag.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\User.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\fieldResolvers\TermFieldResolver.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\subscriptionResolvers\PostSubscription.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\AuthorityRepository.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\Utils\ASCIIConverter.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\UserAuthorityRepository.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\security\HideFieldsForSomeUser.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\TagModel.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\specification\TermSpecification.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\impl\PostServiceImpl.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\UserRepository.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\filter\PostFilter.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\DefaultCustomEdge.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\interceptor\BeginAfterHandleRequestFilter.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\PostMetaRepository.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\jwt\JwtUserLoginModel.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\relationship\post\TagRelationshipModel.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\specification\TagSpecification.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\relationship\user\UserAuthority.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\fieldResolvers\UserFieldsResolver.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\CustomSort.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\Term.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\filter\TagFilter.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\GraphqlConfiguration.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\impl\TermServiceImpl.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\PostModel.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\objectResolvers\TermResolver.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\jwt\JwtProvider.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\objectResolvers\PostResolver.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\impl\AuthorityServiceImpl.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\Utils\FileUtilsService.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\filter\TermFilter.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\Post.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\CustomUserDetail.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\Authority.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\UserRegisterModel.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\jwt\JwtAuthenticationProvider.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\BeanConfiguration.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\filter\UserFilter.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\fieldResolvers\PostFieldsResolver.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\TagRepository.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\IBaseService.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\relationship\user\UserAuthorityId.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\directivewring\ConnectionSelectionDirectiveWring.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\impl\TagServiceImpl.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\scalar\ScalarTypeUtils.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\CustomPageable.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\relationship\post\TermRelationshipModel.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\WebSecurityConfiguration.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\PostMeta.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\CustomOrder.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\CustomConnection.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\relationship\TermRelationshipRepository.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\objectResolvers\TagResolver.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\objectResolvers\UserResolver.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\Utils\SecurityUtils.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\objectResolvers\ConnectionQuery.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\relationship\TagRelationshipRepository.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\AuthorityModel.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\TermRepository.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\ITagService.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\PostMetaModel.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\UserModel.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\PostRepository.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\impl\PostMetaServiceImpl.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\dataloaders\CustomGraphQLServletContextBuilder.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\relationship\post\TermRelationship.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\fieldResolvers\TagFieldResolver.java
-C:\Users\Shiki Oris\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\impl\UserServiceImpl.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\IUserService.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\jwt\JwtLoginResponse.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\objectResolvers\ConnectionQuery.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\UserAuthorityRepository.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\Authority.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\IMailService.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\interceptor\BeginAfterHandleRequestFilter.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\objectResolvers\PostResolver.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\impl\UserServiceImpl.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\ITermService.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\Utils\SecurityUtils.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\PostRepository.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\Post.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\DefaultCustomEdge.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\TagModel.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\WebConfiguration.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\directivewring\ConnectionSelectionDirectiveWring.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\filter\PostFilter.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\impl\AuthorityServiceImpl.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\security\HideFieldsForSomeUser.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\BeanConfiguration.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\AuthorityModel.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\specification\TagSpecification.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\AuthorityRepository.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\Utils\ASCIIConverter.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\relationship\user\UserAuthorityId.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\scalar\ScalarTypeUtils.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\Utils\RequestUtil.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\Tag.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\publishers\PostUpdatePublisher.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\CustomSort.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\fieldResolvers\UserFieldsResolver.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\CustomConnection.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\PostMeta.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\objectResolvers\UserResolver.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\PostMetaRepository.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\CustomUserDetail.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\relationship\post\TermRelationshipModel.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\Utils\FileUtilsService.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\User.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\specification\PostSpecification.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\IAuthorityService.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\relationship\post\TagRelationshipModel.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\subscriptionResolvers\PostSubscription.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\filter\UserFilter.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\TermModel.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\Term.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\fieldResolvers\TermFieldResolver.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\relationship\post\TagRelationship.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\relationship\TagRelationshipRepository.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\UserRepository.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\DefaultCustomConnection.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\filter\TagFilter.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\relationship\TermRelationshipRepository.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\filter\TermFilter.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\IBaseService.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\WebSecurityConfiguration.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\DefaultCustomPageInfo.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\specification\TermSpecification.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\relationship\post\TermRelationship.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\CustomOrder.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\UserModel.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\dataloaders\CustomGraphQLServletContextBuilder.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\PostMetaModel.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\IPostMetaService.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\AnimenewsBackendGraphqlApplication.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\objectResolvers\TagResolver.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\filter\BeforeGoInFilter.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\TagRepository.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\CustomPageInfo.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\jwt\JwtAuthenticationProvider.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\TermRepository.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\objectResolvers\TermResolver.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\impl\MailServiceImpl.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\jwt\JwtUserLoginModel.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\WebSocketConfiguration.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\impl\PostServiceImpl.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\impl\TagServiceImpl.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\fieldResolvers\PostFieldsResolver.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\PostModel.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\web\TestController.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\Utils\TimeUtilsService.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\connection\CustomPageable.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\resolvers\fieldResolvers\TagFieldResolver.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\entity\relationship\user\UserAuthority.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\config\jwt\JwtProvider.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\model\UserRegisterModel.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\ITagService.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\repository\specification\UserSpecification.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\graphql\GraphqlConfiguration.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\IPostService.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\impl\TermServiceImpl.java
+C:\Users\haunv\Desktop\animenews\animenews_backend_graphql\src\main\java\animenews\service\impl\PostMetaServiceImpl.java

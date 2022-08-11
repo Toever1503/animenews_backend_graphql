@@ -3,6 +3,7 @@ animenews\service\IUserService.class
 animenews\entity\Term$TermBuilder.class
 animenews\repository\relationship\TagRelationshipRepository.class
 animenews\service\impl\TagServiceImpl.class
+animenews\graphql\resolvers\subscriptionResolvers\PostSubscription.class
 animenews\model\filter\TermFilter.class
 animenews\entity\PostMeta$PostMetaBuilder.class
 animenews\graphql\resolvers\objectResolvers\ConnectionQuery$Edges.class
@@ -70,6 +71,7 @@ animenews\graphql\dataloaders\CustomGraphQLServletContextBuilder.class
 animenews\Utils\TimeUtilsService.class
 animenews\graphql\connection\DefaultCustomEdge.class
 animenews\entity\Post_.class
+animenews\graphql\publishers\PostUpdatePublisher.class
 animenews\model\TermModel.class
 animenews\repository\specification\UserSpecification.class
 animenews\model\relationship\post\TermRelationshipModel$TermRelationshipModelBuilder.class
@@ -80,6 +82,7 @@ animenews\service\impl\UserServiceImpl.class
 animenews\config\interceptor\BeginAfterHandleRequestFilter.class
 animenews\model\PostModel.class
 animenews\config\BeanConfiguration.class
+animenews\config\WebSocketConfiguration.class
 animenews\repository\relationship\TermRelationshipRepository.class
 animenews\config\jwt\JwtLoginResponse$JwtLoginResponseBuilder.class
 animenews\graphql\directivewring\ConnectionSelectionDirectiveWring.class

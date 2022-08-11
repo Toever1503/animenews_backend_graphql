@@ -1,5 +1,5 @@
 server:
-  port: 9090
+  port: 80
 maxFetchResult: 30
 spring:
   jpa:
@@ -27,7 +27,7 @@ spring:
     show-sql: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mariadb://35.221.138.72:3306/animyrju_main_graphql?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+    url: jdbc:mariadb://54.180.113.120:3306/animyrju_main_graphql?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
     username: animyrju
     password: 1234
     driverClassName: org.mariadb.jdbc.Driver
