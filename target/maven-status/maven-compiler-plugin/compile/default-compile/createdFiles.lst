@@ -1,4 +1,5 @@
 animenews\graphql\connection\CustomConnection.class
+animenews\graphql\exception\CustomException.class
 animenews\service\IUserService.class
 animenews\entity\Term$TermBuilder.class
 animenews\repository\relationship\TagRelationshipRepository.class
@@ -79,6 +80,7 @@ animenews\entity\relationship\user\UserAuthorityId$UserAuthorityIdBuilder.class
 animenews\graphql\connection\CustomOrder.class
 animenews\repository\UserRepository.class
 animenews\service\impl\UserServiceImpl.class
+animenews\graphql\exception\CustomDataFetcherExceptionHandler.class
 animenews\config\interceptor\BeginAfterHandleRequestFilter.class
 animenews\model\PostModel.class
 animenews\config\BeanConfiguration.class

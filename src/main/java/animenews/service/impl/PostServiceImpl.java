@@ -3,6 +3,7 @@ package animenews.service.impl;
 import animenews.Utils.ASCIIConverter;
 import animenews.Utils.SecurityUtils;
 import animenews.entity.Post;
+import animenews.graphql.exception.CustomGraphqlException;
 import animenews.graphql.publishers.PostUpdatePublisher;
 import animenews.model.filter.PostFilter;
 import animenews.model.PostModel;
@@ -69,7 +70,8 @@ public class PostServiceImpl implements IPostService {
     @Transactional
     @Override
     public Post findById(Long id) {
-        return this.postRepository.findById(id).orElseThrow(() -> new RuntimeException("Post not found"));
+//        GraphQLObjectType
+        return this.postRepository.findById(id).orElseThrow(() -> new CustomGraphqlException("Post not found"));
     }
 
     @Transactional
