@@ -27,6 +27,9 @@ type Query {
     user(username: String!): User
     users(page: PageInput!): UserConnection
     usersFilter(filter: UserFilter!, page: PageInput!): UserConnection
+
+    commentsByPost(postId: ID!, page: PageInput!): CommentConnection
+    commentsByParent(parentId: ID!, page: PageInput!): CommentConnection
 }
 
 type Mutation {
@@ -49,6 +52,11 @@ type Mutation {
     forgotPassword(username: String!): Boolean
     resetPassword(token: String!, password: String!): Boolean
     login(userLogin: userLoginInput): loginResponse
+
+    addComment(comment: CommentInput!): Comment
+    updateComment(id: ID!, comment: CommentInput!): Comment
+    likeUnlikeComment(id: ID!): Boolean
+    dislikeUnDislikeComment(id: ID!): Boolean
 }
 
 type Subscription{

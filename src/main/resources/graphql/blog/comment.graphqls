@@ -1,0 +1,17 @@
+type Comment {
+    id: ID
+    commentParent: ID
+    content: String
+    post: ID
+}
+
+type CommentConnection {
+    edges: [Comment]
+    pageInfo: PageInfo
+}
+
+input CommentInput {
+    commentParent: ID
+    content: String
+    post: ID
+}

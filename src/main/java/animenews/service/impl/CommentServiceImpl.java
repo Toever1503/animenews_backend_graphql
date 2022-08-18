@@ -74,12 +74,12 @@ public class CommentServiceImpl implements ICommentService {
     }
 
     @Override
-    public void likeUnlikeComment(Long commentId) {
-
+    public Boolean likeUnlikeComment(Long commentId) {
+        return null;
     }
 
     @Override
-    public void dislikeUnDislikeComment(Long commentId) {
-
+    public Boolean dislikeUnDislikeComment(Long commentId) {
+        return null;
     }
 }

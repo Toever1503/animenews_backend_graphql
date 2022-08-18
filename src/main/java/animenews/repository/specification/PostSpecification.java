@@ -2,9 +2,9 @@ package animenews.repository.specification;
 
 import animenews.entity.Post;
 import animenews.entity.Post_;
+import animenews.entity.relationship.user.post.TagRelationship_;
+import animenews.entity.relationship.user.post.TermRelationship_;
 import animenews.model.filter.PostFilter;
-import animenews.entity.relationship.post.TagRelationship_;
-import animenews.entity.relationship.post.TermRelationship_;
 import org.springframework.data.jpa.domain.Specification;
 
 import java.util.ArrayList;
