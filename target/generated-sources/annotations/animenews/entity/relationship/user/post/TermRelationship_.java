@@ -1,4 +1,4 @@
-package animenews.entity.relationship.post;
+package animenews.entity.relationship.user.post;
 
 import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;

@@ -1,7 +1,7 @@
 package animenews.entity;
 
-import animenews.entity.relationship.post.TagRelationship;
-import animenews.entity.relationship.post.TermRelationship;
+import animenews.entity.relationship.user.post.TagRelationship;
+import animenews.entity.relationship.user.post.TermRelationship;
 import java.util.Date;
 import javax.annotation.Generated;
 import javax.persistence.metamodel.ListAttribute;

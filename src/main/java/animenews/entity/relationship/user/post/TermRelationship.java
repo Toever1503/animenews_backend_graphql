@@ -1,4 +1,4 @@
-package animenews.entity.relationship.post;
+package animenews.entity.relationship.user.post;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,23 +7,22 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "tag_relationships")
+@Table(name = "term_relationships")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class TagRelationship {
+public class TermRelationship {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Long id;
 
-    @Column(name = "object_id", nullable = false)
+    @Column(name = "object_id")
     private Long objectId;
 
-    @Column(name = "tag_id", nullable = false)
-    private Long tagId;
+    @Column(name = "term_id")
+    private Long termId;
 
-    @Column(name = "tag_by", nullable = false)
-    private String tagBy;
-
+    @Column(name = "term_by", nullable = false, length = 50)
+    private String termBy;
 }

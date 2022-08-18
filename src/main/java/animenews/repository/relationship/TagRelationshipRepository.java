@@ -1,6 +1,6 @@
 package animenews.repository.relationship;
 
-import animenews.entity.relationship.post.TagRelationship;
+import animenews.entity.relationship.user.post.TagRelationship;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

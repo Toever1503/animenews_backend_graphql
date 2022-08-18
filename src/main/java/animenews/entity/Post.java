@@ -1,15 +1,13 @@
 package animenews.entity;
 
-import animenews.entity.relationship.post.TagRelationship;
-import animenews.entity.relationship.post.TermRelationship;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import animenews.entity.relationship.user.post.TagRelationship;
+import animenews.entity.relationship.user.post.TermRelationship;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Where;
-import org.hibernate.annotations.WhereJoinTable;
 
 import javax.persistence.*;
 import java.io.Serializable;
